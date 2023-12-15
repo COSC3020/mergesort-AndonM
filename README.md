@@ -12,6 +12,4 @@ part of the array each recursive call considers.
 
 ## Runtime Analysis
 
-Analyse the time complexity of your implementation and give a $\Theta$ bound for
-its worst-case runtime. Add your answer, including your reasoning, to this
-markdown file.
+In the worst-case, the outer loop of the main mergesort function runs for log(n) iterations, where n is the length of the array. This is because in each iteration, the size of the subarrays to be merged is doubled. Within each iteration of the outer loop, the inner loop takes O(n) time, as it iterates over the entire array once. Lastly we observe that the merge function, called within the inner loop, also takes O(n) time relative to the size of the merged subarrays. Given that each merge takes linear time, we see that the big-theta bound for the worst-case runtime is $\Theta(n log n)$
